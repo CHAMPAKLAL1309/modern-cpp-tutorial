@@ -11,9 +11,11 @@
 #include "foo.h"
 #include <iostream>
 #include <functional>
+#include <conio.h>
 
 int main() {
     // use lambda expression
+    clrscr();
     [out = std::ref(std::cout << "Result from C code: " << add(1, 2))](){
         out.get() << ".\n";
     }();
